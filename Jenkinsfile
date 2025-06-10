@@ -1,6 +1,9 @@
 pipeline {
     agent any
-
+    // Déclenchement automatique chaque dimanche à 00h00
+    triggers {
+        cron('0 0 * * 0')
+    }
     stages {
         stage('Checkout') {
             steps {

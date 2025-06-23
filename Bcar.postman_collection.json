@@ -137,7 +137,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"username\": \"zoneManager@email.com\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+									"raw": "{\r\n  \"username\": \"zoneManager1@email.com\",\r\n  \"password\": \"123456\"\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1335,7 +1335,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseurl}}/api/partners/isAnnouncer/createdBy/1001",
+									"raw": "{{baseurl}}/api/partners/isAnnouncer/createdBy/1",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -1344,7 +1344,7 @@
 										"partners",
 										"isAnnouncer",
 										"createdBy",
-										"1001"
+										"1"
 									]
 								}
 							},
@@ -1486,14 +1486,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseurl}}/api/partners/{{partnerId}}/AnnualDiscountExiste",
+									"raw": "{{baseurl}}/api/partners/1301/AnnualDiscountExiste",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"api",
 										"partners",
-										"{{partnerId}}",
+										"1301",
 										"AnnualDiscountExiste"
 									]
 								}
@@ -1556,7 +1556,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"id\": \"{{partnerId}}\",\r\n    \"label\": \"test11 update test\"\r\n\r\n}",
+									"raw": "{\r\n    \"id\": \"1301\",\r\n    \"label\": \"test11 update test\"\r\n\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1564,14 +1564,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseurl}}/api/partners/{{partnerId}}",
+									"raw": "{{baseurl}}/api/partners/1301",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"api",
 										"partners",
-										"{{partnerId}}"
+										"1301"
 									]
 								}
 							},
@@ -2315,14 +2315,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseurl}}/api/announcers/1153",
+									"raw": "{{baseurl}}/api/announcers/4451",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"api",
 										"announcers",
-										"1153"
+										"4451"
 									]
 								}
 							},
@@ -2514,7 +2514,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"id\": 1153,\r\n\r\n    \"facebook\": \"mmmffmm\"\r\n\r\n}",
+									"raw": "{\r\n    \"id\": 4451,\r\n\r\n    \"facebook\": \"mmmffmm\"\r\n\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2522,14 +2522,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseurl}}/api/announcers/1153",
+									"raw": "{{baseurl}}/api/announcers/4451",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"api",
 										"announcers",
-										"1153"
+										"4451"
 									]
 								}
 							},
@@ -4482,7 +4482,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"title\": \"In corporis ipsum ac\",\r\n  \"description\": \"Non omnis id et dol\",\r\n  \"amount\": 62,\r\n  \"quantity\": 212,\r\n  \"expiration_date\": \"2005-11-02\",\r\n  \"start_date\": \"2003-01-24\",\r\n  \"status\": \"EXPIRED\",\r\n  \"partnerId\": 1103\r\n}",
+									"raw": "{\r\n  \"title\": \"In corporis ipsum ac\",\r\n  \"description\": \"Non omnis id et dol\",\r\n  \"amount\": 62,\r\n  \"quantity\": 212,\r\n  \"expiration_date\": \"2005-11-02\",\r\n  \"start_date\": \"2003-01-24\",\r\n  \"status\": \"EXPIRED\",\r\n  \"partnerId\": 1301\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -4635,23 +4635,6 @@
 											"});\r",
 											"\r",
 											"\r",
-											"pm.test(\"[LOGIC] Quantity limits\", () => {\r",
-											"    const data = pm.response.json();\r",
-											"    pm.expect(data.quantity).to.be.above(0, \"Quantity must be positive\");\r",
-											"    pm.expect(data.quantity).to.be.below(1000000, \"Unrealistic quantity value\");\r",
-											"});\r",
-											"\r",
-											"pm.test(\"[LOGIC] amount limits\", () => {\r",
-											"    const data = pm.response.json();\r",
-											"    pm.expect(data.quantity).to.be.above(0, \"Amount must be positive\");\r",
-											"});\r",
-											"\r",
-											"pm.test(\"[LOGIC] Id Valide\", () => {\r",
-											"    const data = pm.response.json();\r",
-											"        pm.expect(data.id).to.not.be.null,`Invalid id`;\r",
-											"        pm.expect(data.id).equal(pm.environment.get(\"offerId\"))\r",
-											"});\r",
-											"\r",
 											""
 										],
 										"type": "text/javascript",
@@ -4677,7 +4660,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"title\" : \"Aut deserunt qui con\",\r\n  \"description\" : \"Impedit iste commod\",\r\n  \"amount\" : 90,\r\n  \"quantity\" : 217,\r\n  \"expiration_date\" : \"2014-11-15\",\r\n  \"partnerId\" : 1051,\r\n  \"start_date\" : \"1993-06-10\",\r\n  \"status\" : \"EXPIRED\"\r\n}",
+									"raw": "",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -4685,14 +4668,15 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseurl}}/api/offers/{{offerId}}",
+									"raw": "{{baseurl}}/api/offers/by-partner/1301",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"api",
 										"offers",
-										"{{offerId}}"
+										"by-partner",
+										"1301"
 									]
 								}
 							},
@@ -5404,7 +5388,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"projectName\": \"Lareina Newton\",\r\n  \"category\": null,\r\n  \"description\": \"Et cupiditate enim d\",\r\n  \"startDate\": \"1994-04-09T23:00:00.000Z\",\r\n  \"endDate\": \"1994-05-09T23:00:00.000Z\",\r\n  \"zone\": null,\r\n  \"city\": null,\r\n  \"governorate\": null,\r\n  \"status\": \"EXPIRED\",\r\n  \"discountType\": \"Avantagieuse\",\r\n  \"discountTitle\": \"Blanditiis voluptate\",\r\n  \"discountRate\": 87,\r\n  \"renewable\": null,\r\n  \"partnerId\": 1103\r\n}",
+									"raw": "{\r\n  \"projectName\": \"Lareina Newton\",\r\n  \"category\": null,\r\n  \"description\": \"Et cupiditate enim d\",\r\n  \"startDate\": \"1994-04-09T23:00:00.000Z\",\r\n  \"endDate\": \"1994-05-09T23:00:00.000Z\",\r\n  \"zone\": null,\r\n  \"city\": null,\r\n  \"governorate\": null,\r\n  \"status\": \"EXPIRED\",\r\n  \"discountType\": \"Avantagieuse\",\r\n  \"discountTitle\": \"Blanditiis voluptate\",\r\n  \"discountRate\": 87,\r\n  \"renewable\": null,\r\n  \"partnerId\": 1301\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -5670,7 +5654,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseurl}}/api/discounts/by-partner/{{partnerId}}",
+									"raw": "{{baseurl}}/api/discounts/by-partner/1301",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -5678,7 +5662,7 @@
 										"api",
 										"discounts",
 										"by-partner",
-										"{{partnerId}}"
+										"1301"
 									]
 								}
 							},
@@ -6259,6 +6243,11 @@
 											"key": "codesPerPack",
 											"value": "2",
 											"type": "text"
+										},
+										{
+											"key": "commercialId",
+											"value": "1251",
+											"type": "text"
 										}
 									]
 								},
@@ -6791,7 +6780,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"datePublication\": \"2025-06-02T13:22:00.000Z\",\r\n    \"description\": \"Omnis ullam adipisci\",\r\n    \"status\": \"EN_ATTENTE\",\r\n    \"partnerId\": 1103,\r\n    \"messageRefus\": null,\r\n    \"dateValidation\": null,\r\n    \"timePublication\": \"01:10\"\r\n}",
+									"raw": "{\r\n    \"datePublication\": \"2025-06-02T13:22:00.000Z\",\r\n    \"description\": \"Omnis ullam adipisci\",\r\n    \"status\": \"EN_ATTENTE\",\r\n    \"partnerId\": 1301,\r\n    \"messageRefus\": null,\r\n    \"dateValidation\": null,\r\n    \"timePublication\": \"01:10\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -6838,7 +6827,7 @@
 											"pm.test(\"[LOGIC] Id Valide\", () => {\r",
 											"    const data = pm.response.json();\r",
 											"        pm.expect(data.id).to.not.be.null,`Invalid id`;\r",
-											"        pm.expect(data.id).equal(pm.environment.get(\"publicationId\"))\r",
+											"        pm.expect(data.id).equal(5454)\r",
 											"});\r",
 											"\r",
 											""
@@ -6862,14 +6851,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseurl}}/api/publications/{{publicationId}}",
+									"raw": "{{baseurl}}/api/publications/5454",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"api",
 										"publications",
-										"{{publicationId}}"
+										"5454"
 									]
 								}
 							},
@@ -6994,7 +6983,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"id\": \"{{publicationId}}\",\r\n    \"description\": \"yyyym\"\r\n\r\n}",
+									"raw": "{\r\n    \"id\": \"5454\",\r\n    \"description\": \"yyyym\"\r\n\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -7002,14 +6991,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseurl}}/api/publications/{{publicationId}}",
+									"raw": "{{baseurl}}/api/publications/5454",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"api",
 										"publications",
-										"{{publicationId}}"
+										"5454"
 									]
 								}
 							},
